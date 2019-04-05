@@ -9,14 +9,12 @@ from typing import Dict
 
 STATE_NAMES = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory", "WA": "Western Australia",
                "ACT": "Australian Capital Territory", "VIC": "Victoria", "TAS": "Tasmania"}
-
 # print(STATE_NAMES)
 
-state = input("Enter short state: ").upper()
+state = (input("Enter short state: ").upper())
 while state != "":
-    if state in STATE_NAMES:
-    #    print(state, "is", STATE_NAMES[state])
-        print("{} is {}".format(state, STATE_NAMES))
+    for k, v in STATE_NAMES.items():
+        print(k, 'is', str(v))
     else:
         print("Invalid short state")
-    state = input("Enter short state: ")
+state = input("Enter short state: ")
